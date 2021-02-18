@@ -2,11 +2,11 @@ import * as parser from "./parser";
 import * as polandParser from "./polandParser";
 import * as operators from "./operators";
 
-export function run(input: string): number {
+export function runCalculate(input: string): number {
   return calculate(parser.parseString(input));
 }
 
-export function runPoland(input: string): number {
+export function runCalculatePoland(input: string): number {
   return calculate(polandParser.parseString(input));
 }
 

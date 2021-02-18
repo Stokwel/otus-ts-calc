@@ -16,7 +16,7 @@ const recursiveAsyncReadLine = function () {
     }
 
     try {
-      const result = isPoland ? core.runPoland(answer) : core.run(answer);
+      const result = isPoland ? core.runCalculatePoland(answer) : core.runCalculate(answer);
       console.log(`Result: ${result}`);
     } catch (e) {
       console.log("Wrong string, try again!");
