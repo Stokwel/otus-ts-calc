@@ -1,1 +1,1 @@
-Домашнее задание калькулятор, для курса OTUS react.js
+Домашнее задание к уроку 5: JSX как основа ReactJS. Functional components
