@@ -14,18 +14,12 @@ export const Filled = Template.bind({});
 Filled.args = {
     isFilled: true,
     x: 100,
-    y: 100,
-    onClick: (x, y) => {
-        alert((`${x} - ${y}`));
-    }
+    y: 100
 };
 
 export const NotFilled = Template.bind({});
 NotFilled.args = {
     isFilled: false,
     x: 100,
-    y: 100,
-    onClick: (x, y) => {
-        alert((`${x} - ${y}`));
-    }
+    y: 100
 };

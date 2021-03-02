@@ -7,9 +7,9 @@ module.exports =  {
     parserOptions:  {
         ecmaVersion:  2018,  // Allows for the parsing of modern ECMAScript features
         sourceType:  'module',  // Allows for the use of imports
-        ecmaFeatures:  {
-            jsx:  true,  // Allows for the parsing of JSX
-        },
+        //ecmaFeatures:  {
+        //    jsx:  true,  // Allows for the parsing of JSX
+        //},
     },
     rules:  {
         '@typescript-eslint/ban-types': [

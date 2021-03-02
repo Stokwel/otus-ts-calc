@@ -2,7 +2,7 @@ import React, {FC} from "react";
 import styled from "@emotion/styled";
 import {css} from "@emotion/core";
 
-const BaseStyle = css`
+const baseStyle = css`
   width: 25px;
   height: 25px;
   border: 1px solid;
@@ -11,11 +11,11 @@ const BaseStyle = css`
   border-radius: 5px;
 `;
 
-const EmptyStyle = css`
+const emptyStyle = css`
   background-color: white;
 `;
 
-const FilledStyle = css`
+const filledStyle = css`
   background-color: black;
 `;
 
@@ -23,22 +23,26 @@ interface StyleProps {
     isFilled: boolean;
 }
 
+function onClickAction(x: number, y: number): void
+{
+    console.info(`${x} - ${y}`);
+}
+
 export const CellWrapper = styled.button<StyleProps>`
-  ${BaseStyle};
-  ${({isFilled}) => (isFilled ? FilledStyle : EmptyStyle)};
+  ${baseStyle};
+  ${({isFilled}) => (isFilled ? filledStyle : emptyStyle)};
 `;
 
 export interface CellProps {
     isFilled: boolean;
     x: number;
     y: number;
-    onClick: (x: number, y: number) => void;
 }
 
-export const Cell: FC<CellProps> = ({isFilled, x, y, onClick}) => (
+export const Cell: FC<CellProps> = ({isFilled, x, y}) => (
     <CellWrapper
         isFilled={isFilled}
-        onClick={() => onClick(x, y)}
+        onClick={() => onClickAction(x, y)}
     >
     </CellWrapper>
 );

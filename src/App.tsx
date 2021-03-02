@@ -4,9 +4,7 @@ import React from "react";
 
 function App() {
   return (
-      <Field cells={generate(5)} onClick={(x, y) => {
-        console.info(`${x} - ${y}`);
-      }}/>
+      <Field cells={generate(5)} />
   );
 }
 

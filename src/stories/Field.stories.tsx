@@ -18,8 +18,5 @@ Primary.args = {
     [true, true, false, true, false],
     [true, false, false, true, false],
     [false, false, true, true, false],
-  ],
-  onClick: (x, y) => {
-    alert((`${x} - ${y}`));
-  }
+  ]
 };
