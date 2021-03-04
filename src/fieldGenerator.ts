@@ -3,7 +3,7 @@ export function generate(dimension: number): boolean[][] {
   for (let i = 0; i < dimension; i++) {
     field[i] = [];
     for (let j = 0; j < dimension; j++) {
-      field[i][j] = Math.random() < 0.5
+      field[i][j] = Math.random() < 0.5;
     }
   }
 

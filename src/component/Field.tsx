@@ -1,9 +1,10 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
 import styled from "@emotion/styled";
-import {Cell} from './Cell';
+import { Cell } from "./Cell";
 
 export interface FieldProps {
-    cells: boolean[][];
+  cells: boolean[][];
+  onClick: (x: number, y: number) => void;
 }
 
 const FieldWrapper = styled.div`
@@ -12,16 +13,19 @@ const FieldWrapper = styled.div`
   display: inline-block;
 `;
 
-export const Field: FC<FieldProps> = ({cells}) => (
-    <FieldWrapper>
-        {
-            cells?.map((row, x) => [
-                ...row?.map((isFilled: boolean, y) => (
-                    <Cell key={`${x}_${y}`} isFilled={isFilled} x={x} y={y}>
-                    </Cell>
-                )),
-            x !== row.length - 1 ? <br key={x}/> : null,
-            ])
-        }
-    </FieldWrapper>
+export const Field: FC<FieldProps> = ({ cells, onClick }) => (
+  <FieldWrapper>
+    {cells.map((row, x) => [
+      ...row.map((isFilled: boolean, y) => (
+        <Cell
+          key={`${x}_${y}`}
+          isFilled={isFilled}
+          x={x}
+          y={y}
+          onClick={onClick}
+        />
+      )),
+      x !== row.length - 1 ? <br key={x} /> : null,
+    ])}
+  </FieldWrapper>
 );
