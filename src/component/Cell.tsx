@@ -23,10 +23,6 @@ interface StyleProps {
   isFilled: boolean;
 }
 
-function onClickAction(x: number, y: number): void {
-  console.info(`${x} - ${y}`);
-}
-
 export const CellWrapper = styled.button<StyleProps>`
   ${baseStyle};
   ${({ isFilled }) => (isFilled ? filledStyle : emptyStyle)};
