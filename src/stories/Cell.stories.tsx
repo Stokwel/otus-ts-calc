@@ -15,7 +15,7 @@ Filled.args = {
   isFilled: true,
   x: 100,
   y: 100,
-  onClick: (x, y) => {
+  onClick: (x: number, y: number) => {
     alert(`${x} - ${y}`);
   },
 };
@@ -25,7 +25,7 @@ NotFilled.args = {
   isFilled: false,
   x: 100,
   y: 100,
-  onClick: (x, y) => {
+  onClick: (x: number, y: number) => {
     alert(`${x} - ${y}`);
   },
 };
