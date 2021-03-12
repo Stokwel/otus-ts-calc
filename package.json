@@ -94,10 +94,12 @@
   "lint-staged": {
     "*.{ts,js,tsx}": [
       "prettier --write",
-      "tslint src/"
+      "tslint src/",
+      "git add"
     ],
     "*.{html,scss,css}": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
   }
 }
