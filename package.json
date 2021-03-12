@@ -12,7 +12,7 @@
     "build-storybook": "build-storybook -s public",
     "loki-update": "loki update",
     "loki-test": "loki test",
-    "eslint": "eslint src/",
+    "eslint": "eslint --max-warnings=0 src/",
     "postinstall": "husky install"
   },
   "eslintConfig": {
@@ -91,7 +91,7 @@
   "lint-staged": {
     "*.{ts,js,tsx}": [
       "prettier --write",
-      "eslint src/"
+      "eslint --max-warnings=0 src/"
     ],
     "*.{html,scss,css}": [
       "prettier --write"

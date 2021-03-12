@@ -2,7 +2,7 @@ import { generate } from "./fieldGenerator";
 import { Field } from "./component/Field";
 import React from "react";
 
-function App() {
+function App(): JSX.Element {
   return (
     <Field
       cells={generate(5)}
