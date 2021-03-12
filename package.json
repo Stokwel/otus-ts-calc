@@ -11,7 +11,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "loki-update": "loki update",
-    "loki-test": "loki test"
+    "loki-test": "loki test",
+    "eslint": "eslint src/"
   },
   "eslintConfig": {
     "extends": [
@@ -86,20 +87,13 @@
       }
     }
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --relative"
-    }
-  },
   "lint-staged": {
     "*.{ts,js,tsx}": [
       "prettier --write",
-      "tslint src/",
-      "git add"
+      "tslint src/"
     ],
     "*.{html,scss,css}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }

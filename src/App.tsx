@@ -7,6 +7,7 @@ function App(): JSX.Element {
     <Field
 
 
+
       cells={generate(5)}
               onClick={(x, y) => {
               console.info(`${x} - ${y}`);
