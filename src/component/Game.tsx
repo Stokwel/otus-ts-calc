@@ -112,6 +112,7 @@ export class Game extends React.Component<GameProps, GameState> {
         </div>
       </div>
     );
+
   }
 
   private startLive(): void {
