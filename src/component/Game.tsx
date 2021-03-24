@@ -17,7 +17,7 @@ interface GameState {
 }
 
 export class Game extends React.Component<GameProps, GameState> {
-  intervalID?: number;
+  intervalID?: NodeJS.Timeout;
   maxLives: number;
 
   constructor(props: GameProps) {
@@ -125,7 +125,7 @@ export class Game extends React.Component<GameProps, GameState> {
   }
 
   private changeIsLive(event: ChangeEvent): void {
-    this.setState({ isLive: event.target.checked });
+    this.setState({ isLive: (event.target as HTMLInputElement).checked });
   }
 
   private live(): void {
