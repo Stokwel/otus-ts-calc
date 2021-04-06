@@ -18,12 +18,6 @@
     "eslint": "eslint --max-warnings=0 src/",
     "postinstall": "husky install"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -90,7 +84,7 @@
   "lint-staged": {
     "*.{ts,js,tsx}": [
       "prettier --write",
-      "eslint --max-warnings=0 src/"
+      "eslint src/"
     ],
     "*.{html,scss,css}": [
       "prettier --write"
